@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Return</title>
+</head>
+<body>
+    <h1 id="title">Rendezés</h1>
+    <button id="kezd" onclick="emel()">Megjelenít</button>
+    <div id="megold" style="display: none;">
+
+    </div>
+</body>
+
+<style>
+    body
+    {
+        background-color: lightblue;
+    }
+    #title
+    {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #kezd
+    {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 3%;
+        padding: 1rem;
+        width: 10rem;
+    }
+    #megold
+    {
+        width: 80%;
+        height: 20%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    span
+    {
+        margin-left: 5px;
+        font-size: 1.5rem;
+    }
+
+    span:active:after
+    {
+        content:attr(title);
+        padding:5px;
+        color: red;
+    }
+
+    @media only screen and (max-width: 700px)
+    {
+        #megold
+        {
+            transform: translate(-50%, -100%);
+        }
+        span
+        {
+            display: list-item;
+            list-style-type: none;
+            margin-top: 15px;
+        }
+    }
+</style>
+
+</html>
