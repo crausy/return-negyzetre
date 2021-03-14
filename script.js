@@ -15,7 +15,7 @@ function emel()
     {
         /*spanba rakja a számokat, title-t ad az eredmény létrejöttéről, megfelelő számú id-t rendel melléjük*/
         let span = document.createElement("span");
-        span.setAttribute("title", `${i} * ${i+1} a négyzeten`);
+        span.setAttribute("title", `(${i} * ${i+1}) a négyzeten`);
         span.setAttribute("id", `szam${i}`)
         document.getElementById("megold").appendChild(span);
 
